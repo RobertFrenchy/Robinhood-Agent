@@ -1,0 +1,2 @@
+[console_scripts]
+robinhood-agent = robinhood_agent.cli:main

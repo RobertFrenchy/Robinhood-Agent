@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robinhood-agent"
+version = "0.1.0"
+description = "Claude-powered trading agent for Robinhood stocks/ETFs with hard risk guardrails"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=1.11,<2",
+    "robin-stocks>=3.4,<4",
+    "pyotp>=2.9",
+    "pydantic>=2.6",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+robinhood-agent = "robinhood_agent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["robinhood_agent*"]

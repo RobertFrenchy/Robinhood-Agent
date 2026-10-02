@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: robinhood-agent
+Version: 0.1.0
+Summary: Claude-powered trading agent for Robinhood stocks/ETFs with hard risk guardrails
+Requires-Python: >=3.10
+Requires-Dist: anthropic<2,>=1.11
+Requires-Dist: robin-stocks<4,>=3.4
+Requires-Dist: pyotp>=2.9
+Requires-Dist: pydantic>=2.6
+Requires-Dist: python-dotenv>=1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
